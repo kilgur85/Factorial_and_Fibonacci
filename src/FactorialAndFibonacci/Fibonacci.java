@@ -3,17 +3,14 @@ package FactorialAndFibonacci;
 import java.util.Arrays;
 
 public class Fibonacci {
-    public static void main(String[] args) {
-        int fibonacciNUmber = 7;
-        int[] arrayfib = new int[fibonacciNUmber];
-        fibonacciNumberInCycleFor(fibonacciNUmber);
-        System.out.println(Arrays.toString(fibonacciNumberInCycleFor(fibonacciNUmber)));
+    protected int fibonacciNUmber;
 
-        fibonacciNumberInCycleDoWhile(fibonacciNUmber);
-        System.out.println(Arrays.toString(fibonacciNumberInCycleDoWhile(fibonacciNUmber)));
+        public Fibonacci(){
+                    }
 
-        fibonacciNumbersWithRecursion(fibonacciNUmber, arrayfib);
-        System.out.println(Arrays.toString(fibonacciNumbersWithRecursion(fibonacciNUmber, arrayfib)));
+    public Fibonacci(int fibonacciNUmber ) {
+        this.fibonacciNUmber = fibonacciNUmber;
+
     }
 
     public static int[] fibonacciNumberInCycleFor(int fibonacciNUmber) {
@@ -58,4 +55,14 @@ public class Fibonacci {
         }
         return arrayfib;
     }
+
+    public int getFibonacciNUmber() {
+        return fibonacciNUmber;
+    }
+
+    public void setFibonacciNUmber(int fibonacciNUmber) {
+        this.fibonacciNUmber = fibonacciNUmber;
+    }
+
+
 }

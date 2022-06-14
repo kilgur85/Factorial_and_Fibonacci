@@ -1,32 +1,45 @@
 package FactorialAndFibonacci;
 
 public class Factorial {
+    protected int numberOfFactoral;
     public Factorial(){
 
     }
+    public Factorial(int numberOfFactoral) {
+        this.numberOfFactoral = numberOfFactoral;
+    }
 
-    public static int getFactorialInCyclFor(int n) {
+    public  int getFactorialInCyclFor(int  numberOfFactoral) {
         int result = 1;
-        for (int i = 1; i <= n; i++) {
+        for (int i = 1; i <=  numberOfFactoral; i++) {
             result = result * i;
         }
         return result;
     }
 
-    public static int getFactorialRecursion(int n) {
-        if (n <= 1) {
+    public  int getFactorialRecursion(int  numberOfFactoral) {
+        if ( numberOfFactoral <= 1) {
             return 1;
         } else {
-            return n * getFactorialRecursion(n - 1);
+            return  numberOfFactoral * getFactorialRecursion( numberOfFactoral - 1);
         }
     }
 
-    public static int getFactorialCycleWhile(int n) {
+    public  int getFactorialCycleWhile(int  numberOfFactoral) {
         int result = 1;
-        while (n > 1) {
-            result *= n--;
+        while ( numberOfFactoral > 1) {
+            result *=  numberOfFactoral--;
         }
         return result;
+    }
+
+
+    public int getNumberOfFactoral() {
+        return numberOfFactoral;
+    }
+
+    public void setNumberOfFactoral(int numberOfFactoral) {
+        this.numberOfFactoral = numberOfFactoral;
     }
 
 }

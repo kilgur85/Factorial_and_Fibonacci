@@ -1,7 +1,4 @@
 package FactorialAndFibonacci;
-
-import java.util.Arrays;
-
 public class Fibonacci {
     protected int fibonacciNUmber;
 
@@ -13,7 +10,7 @@ public class Fibonacci {
 
     }
 
-    public static int[] fibonacciNumberInCycleFor(int fibonacciNUmber) {
+    public  int[] fibonacciNumberInCycleFor(int fibonacciNUmber) {
         int[] array = new int[fibonacciNUmber];
         array[0] = 1;
         array[1] = 1;
@@ -23,7 +20,7 @@ public class Fibonacci {
         return array;
     }
 
-    public static int[] fibonacciNumberInCycleDoWhile(int fibonacciNUmber) {
+    public  int[] fibonacciNumberInCycleDoWhile(int fibonacciNUmber) {
         int count = 2;
         int[] array = new int[fibonacciNUmber];
         array[0] = 1;
@@ -36,7 +33,7 @@ public class Fibonacci {
 
     }
 
-    public static int[] fibonacciNumbersWithRecursion(int fibonacciNUmber, int[] arrayfib) {
+    public  int[] fibonacciNumbersWithRecursion(int fibonacciNUmber, int[] arrayfib) {
         if (arrayfib[0] == 0) {
             arrayfib[0] = 1;
             arrayfib[1] = 1;

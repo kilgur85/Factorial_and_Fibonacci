@@ -1,14 +1,6 @@
 package FactorialAndFibonacci;
 public class Fibonacci {
-    protected int fibonacciNUmber;
 
-        public Fibonacci(){
-                    }
-
-    public Fibonacci(int fibonacciNUmber ) {
-        this.fibonacciNUmber = fibonacciNUmber;
-
-    }
 
     public  int[] fibonacciNumberInCycleFor(int fibonacciNUmber) {
         int[] array = new int[fibonacciNUmber];
@@ -53,13 +45,8 @@ public class Fibonacci {
         return arrayfib;
     }
 
-    public int getFibonacciNUmber() {
-        return fibonacciNUmber;
-    }
 
-    public void setFibonacciNUmber(int fibonacciNUmber) {
-        this.fibonacciNUmber = fibonacciNUmber;
-    }
+
 
 
 }

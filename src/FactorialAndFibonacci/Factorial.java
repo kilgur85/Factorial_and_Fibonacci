@@ -1,13 +1,7 @@
 package FactorialAndFibonacci;
 
 public class Factorial {
-    protected int numberOfFactoral;
-    public Factorial(){
 
-    }
-    public Factorial(int numberOfFactoral) {
-        this.numberOfFactoral = numberOfFactoral;
-    }
 
     public  int getFactorialInCyclFor(int  numberOfFactoral) {
         int result = 1;
@@ -32,14 +26,7 @@ public class Factorial {
         }
         return result;
     }
-
-
-    public int getNumberOfFactoral() {
-        return numberOfFactoral;
-    }
-
-    public void setNumberOfFactoral(int numberOfFactoral) {
-        this.numberOfFactoral = numberOfFactoral;
-    }
-
 }
+
+
+

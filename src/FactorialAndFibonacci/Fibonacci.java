@@ -1,8 +1,7 @@
 package FactorialAndFibonacci;
+
 public class Fibonacci {
-
-
-    public  int[] fibonacciNumberInCycleFor(int fibonacciNUmber) {
+    public static int[] fibonacciNumberInCycleFor(int fibonacciNUmber) {
         int[] array = new int[fibonacciNUmber];
         array[0] = 1;
         array[1] = 1;
@@ -12,7 +11,7 @@ public class Fibonacci {
         return array;
     }
 
-    public  int[] fibonacciNumberInCycleDoWhile(int fibonacciNUmber) {
+    public static int[] fibonacciNumberInCycleDoWhile(int fibonacciNUmber) {
         int count = 2;
         int[] array = new int[fibonacciNUmber];
         array[0] = 1;
@@ -25,7 +24,7 @@ public class Fibonacci {
 
     }
 
-    public  int[] fibonacciNumbersWithRecursion(int fibonacciNUmber, int[] arrayfib) {
+    public static int[] fibonacciNumbersWithRecursion(int fibonacciNUmber, int[] arrayfib) {
         if (arrayfib[0] == 0) {
             arrayfib[0] = 1;
             arrayfib[1] = 1;
@@ -45,8 +44,20 @@ public class Fibonacci {
         return arrayfib;
     }
 
+    public int[] fibonacciMetods(int metodsType, int fibonacciNUmber, int[] arrayfib) {
+        int[] result = new int[fibonacciNUmber];
+        switch (metodsType) {
+            case 1:
+                return fibonacciNumberInCycleDoWhile(fibonacciNUmber);
+            case 2:
+                return fibonacciNumbersWithRecursion(fibonacciNUmber, arrayfib);
+            case 3:
+                return fibonacciNumberInCycleFor(fibonacciNUmber);
 
-
-
-
+        }
+        return result;
+    }
 }
+
+
+

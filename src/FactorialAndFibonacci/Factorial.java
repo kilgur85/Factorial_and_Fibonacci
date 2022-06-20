@@ -3,28 +3,39 @@ package FactorialAndFibonacci;
 public class Factorial {
 
 
-    public  int getFactorialInCyclFor(int  numberOfFactoral) {
+    public static int getFactorialInCyclFor(int n) {
         int result = 1;
-        for (int i = 1; i <=  numberOfFactoral; i++) {
+        for (int i = 1; i <= n; i++) {
             result = result * i;
         }
         return result;
     }
 
-    public  int getFactorialRecursion(int  numberOfFactoral) {
-        if ( numberOfFactoral <= 1) {
+    public static int getFactorialRecursion(int n) {
+        if (n <= 1) {
             return 1;
         } else {
-            return  numberOfFactoral * getFactorialRecursion( numberOfFactoral - 1);
+            return n * getFactorialRecursion(n - 1);
         }
     }
 
-    public  int getFactorialCycleWhile(int  numberOfFactoral) {
+    public static int getFactorialCycleWhile(int n) {
         int result = 1;
-        while ( numberOfFactoral > 1) {
-            result *=  numberOfFactoral--;
+        while (n > 1) {
+            result *= n--;
         }
         return result;
+    }
+    public    int factorialMetods (int metodsType, int n ){
+
+        switch (metodsType){
+            case 1:
+                return getFactorialCycleWhile(n);
+            case 2:
+                return getFactorialRecursion(n);
+            case 3:
+                return getFactorialInCyclFor(n);
+        }return metodsType ;
     }
 }
 

@@ -1,9 +1,7 @@
 package FactorialAndFibonacci;
 
 public class Factorial {
-    public Factorial(){
 
-    }
 
     public static int getFactorialInCyclFor(int n) {
         int result = 1;
@@ -28,5 +26,18 @@ public class Factorial {
         }
         return result;
     }
+    public    int factorialMetods (int metodsType, int n ){
 
+        switch (metodsType){
+            case 1:
+                return getFactorialCycleWhile(n);
+            case 2:
+                return getFactorialRecursion(n);
+            case 3:
+                return getFactorialInCyclFor(n);
+        }return metodsType ;
+    }
 }
+
+
+

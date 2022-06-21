@@ -1,23 +1,8 @@
 package FactorialAndFibonacci;
 
-import java.util.Arrays;
-
 public class Fibonacci {
-    public static void main(String[] args) {
-        int fibonacciNUmber = 7;
-        int[] arrayfib = new int[fibonacciNUmber];
-        fibonacciNumberInCycleFor(fibonacciNUmber);
-        System.out.println(Arrays.toString(fibonacciNumberInCycleFor(fibonacciNUmber)));
-
-        fibonacciNumberInCycleDoWhile(fibonacciNUmber);
-        System.out.println(Arrays.toString(fibonacciNumberInCycleDoWhile(fibonacciNUmber)));
-
-        fibonacciNumbersWithRecursion(fibonacciNUmber, arrayfib);
-        System.out.println(Arrays.toString(fibonacciNumbersWithRecursion(fibonacciNUmber, arrayfib)));
-    }
-
-    public static int[] fibonacciNumberInCycleFor(int fibonacciNUmber) {
-        int[] array = new int[fibonacciNUmber];
+    public static int[] fibonacciNumberInCycleFor(int n) {
+        int[] array = new int[n];
         array[0] = 1;
         array[1] = 1;
         for (int i = 2; i < array.length; i++) {
@@ -26,12 +11,12 @@ public class Fibonacci {
         return array;
     }
 
-    public static int[] fibonacciNumberInCycleDoWhile(int fibonacciNUmber) {
+    public static int[] fibonacciNumberInCycleDoWhile(int n) {
         int count = 2;
-        int[] array = new int[fibonacciNUmber];
+        int[] array = new int[n];
         array[0] = 1;
         array[1] = 1;
-        while (count < fibonacciNUmber) {
+        while (count < n) {
             array[count] = array[count - 1] + array[count - 2];
             count++;
         }
@@ -39,11 +24,11 @@ public class Fibonacci {
 
     }
 
-    public static int[] fibonacciNumbersWithRecursion(int fibonacciNUmber, int[] arrayfib) {
+    public static int[] fibonacciNumbersWithRecursion(int n, int[] arrayfib) {
         if (arrayfib[0] == 0) {
             arrayfib[0] = 1;
             arrayfib[1] = 1;
-            return fibonacciNumbersWithRecursion(fibonacciNUmber, arrayfib);
+            return fibonacciNumbersWithRecursion(n, arrayfib);
         } else {
             int i;
             for (i = 0; i < arrayfib.length; i++) {
@@ -51,11 +36,28 @@ public class Fibonacci {
                     break;
                 }
             }
-            if (fibonacciNUmber > i) {
+            if (n > i) {
                 arrayfib[i] = arrayfib[i - 1] + arrayfib[i - 2];
-                return fibonacciNumbersWithRecursion(fibonacciNUmber, arrayfib);
+                return fibonacciNumbersWithRecursion(n, arrayfib);
             }
         }
         return arrayfib;
     }
+
+    public int[] fibonacciMetods(int metodsType, int n, int[] arrayfib) {
+
+        switch (metodsType) {
+            case 1:
+                return fibonacciNumberInCycleDoWhile(n);
+            case 2:
+                return fibonacciNumbersWithRecursion(n, arrayfib);
+            case 3:
+                return fibonacciNumberInCycleFor(n);
+
+        }
+        return new int[]{metodsType};
+    }
 }
+
+
+

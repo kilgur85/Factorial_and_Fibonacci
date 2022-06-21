@@ -4,12 +4,12 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        Fibonacci fibon = new Fibonacci(7);
-        Factorial factor = new Factorial(8);
-
-
+        Test test = new Test();
+        System.out.println(test.swicthMetods(1,7));
+        System.out.println(Arrays.toString((int[]) test.swicthMetods(2,5)));
     }
 }
+
 
 
 

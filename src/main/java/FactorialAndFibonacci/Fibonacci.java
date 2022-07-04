@@ -1,7 +1,7 @@
 package FactorialAndFibonacci;
 
 public class Fibonacci {
-    public static int[] fibonacciNumberInCycleFor(int n) {
+    public  int[] fibonacciNumberInCycleFor(int n) {
         int[] array = new int[n];
         array[0] = 1;
         array[1] = 1;
@@ -11,7 +11,7 @@ public class Fibonacci {
         return array;
     }
 
-    public static int[] fibonacciNumberInCycleDoWhile(int n) {
+    public  int[] fibonacciNumberInCycleDoWhile(int n) {
         int count = 2;
         int[] array = new int[n];
         array[0] = 1;
@@ -24,7 +24,7 @@ public class Fibonacci {
 
     }
 
-    public static int[] fibonacciNumbersWithRecursion(int n, int[] arrayfib) {
+    public  int[] fibonacciNumbersWithRecursion(int n, int[] arrayfib) {
         if (arrayfib[0] == 0) {
             arrayfib[0] = 1;
             arrayfib[1] = 1;

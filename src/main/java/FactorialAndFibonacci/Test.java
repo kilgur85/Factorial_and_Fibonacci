@@ -4,7 +4,7 @@ public class Test {
     Factorial factorial = new Factorial();
     Fibonacci fibonacci = new Fibonacci();
 
-    public Object swicthMetods (int algoritm ,int metodsType , int n){
+    public  int[] swicthMetods (int algoritm ,int metodsType , int n){
 
         switch (algoritm){
             case 1:

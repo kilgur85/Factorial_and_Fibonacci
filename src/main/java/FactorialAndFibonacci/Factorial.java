@@ -3,7 +3,7 @@ package FactorialAndFibonacci;
 public class Factorial {
 
 
-    public static int getFactorialInCyclFor(int n) {
+    public  int getFactorialInCyclFor(int n) {
         int result = 1;
         for (int i = 1; i <= n; i++) {
             result = result * i;
@@ -11,7 +11,7 @@ public class Factorial {
         return result;
     }
 
-    public static int getFactorialRecursion(int n) {
+    public  int getFactorialRecursion(int n) {
         if (n <= 1) {
             return 1;
         } else {
@@ -19,23 +19,23 @@ public class Factorial {
         }
     }
 
-    public static int getFactorialCycleWhile(int n) {
+    public int[] getFactorialCycleWhile(int n) {
         int result = 1;
         while (n > 1) {
             result *= n--;
         }
-        return result;
+        return new int[]{result};
     }
-    public    int factorialMetods (int metodsType, int n ){
+    public int[] factorialMetods (int metodsType, int n ){
 
         switch (metodsType){
             case 1:
                 return getFactorialCycleWhile(n);
             case 2:
-                return getFactorialRecursion(n);
+                return new int[]{getFactorialRecursion(n)};
             case 3:
-                return getFactorialInCyclFor(n);
-        }return metodsType ;
+                return new int[]{getFactorialInCyclFor(n)};
+        }return new int[]{metodsType};
     }
 }
 

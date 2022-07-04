@@ -19,23 +19,23 @@ public class Factorial {
         }
     }
 
-    public  int getFactorialCycleWhile(int n) {
+    public int[] getFactorialCycleWhile(int n) {
         int result = 1;
         while (n > 1) {
             result *= n--;
         }
-        return result;
+        return new int[]{result};
     }
-    public int factorialMetods (int metodsType, int n ){
+    public int[] factorialMetods (int metodsType, int n ){
 
         switch (metodsType){
             case 1:
                 return getFactorialCycleWhile(n);
             case 2:
-                return getFactorialRecursion(n);
+                return new int[]{getFactorialRecursion(n)};
             case 3:
-                return getFactorialInCyclFor(n);
-        }return metodsType ;
+                return new int[]{getFactorialInCyclFor(n)};
+        }return new int[]{metodsType};
     }
 }
 
